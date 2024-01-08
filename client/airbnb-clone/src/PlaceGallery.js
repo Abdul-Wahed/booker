@@ -10,7 +10,7 @@ export default function PlaceGallery({place}) {
         return(
             <div className="absolute inset-0 bg-black text-white min-h-full">
                 <div className="bg-black p-8 grid gap-4">
-                    <div className="">
+                    <div>
                         <h2 className="text-3xl mr-48">Photos of {place.title}</h2>
                         <button onClick={() => setShowAllPhotos(false)} className="fixed right-12 top-8 flex gap-1 py-2 px-4 rounded-2xl shadow shadow-black bg-white text-black">
                             <IoClose className="mt-1" />Close
@@ -31,7 +31,7 @@ export default function PlaceGallery({place}) {
             <div className="grid gap-2 grid-cols-[2fr_1fr] rounded-3xl overflow-hidden">
                 <div>
                     {place.photos?.[0] && (
-                        <div className="">
+                        <div>
                             <img onClick={() => setShowAllPhotos(true)} className="aspect-square cursor-pointer object-cover" src={'http://localhost:4000/uploads/'+place.photos[0]} />
                         </div>
                     )}
